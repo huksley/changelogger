@@ -1,0 +1,11 @@
+.DS_store
+.gitconfig
+node_modules/
+yarn-error.log
+Thumbs.db
+build/
+*.zip
+data/
+logs/
+**/unit/report.xml
+git*

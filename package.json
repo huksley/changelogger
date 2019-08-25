@@ -1,0 +1,38 @@
+{
+  "name": "changelogger",
+  "description": "",
+  "author": "Ruslan Gainutdinov",
+  "version": "0.1.0",
+  "main": "src/main.ts",
+  "license": "MIT",
+  "scripts": {
+    "lint": "yarn run tslint --p tsconfig.json",
+    "test": "yarn run-node -r ts-node/register src/main",
+    "build": "tsc"
+  },
+  "engines": {
+    "node": ">=8.9.0 <11.0.0",
+    "yarn": ">=1.12.3"
+  },
+  "dependencies": {
+    "nodegit": "^0.24.1",
+    "rambda": "^2.4.1",
+    "request": "^2",
+    "winston": "^2"
+  },
+  "devDependencies": {
+    "@types/nodegit": "^0.24.6",
+    "husky": "^1.3.1",
+    "ts-node": "^8.0.3",
+    "tsconfig": "^7.0.0",
+    "tslint": "^5.15.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.4.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test",
+      "pre-push": "yarn test"
+    }
+  }
+}
